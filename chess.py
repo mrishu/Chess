@@ -386,7 +386,6 @@ while True:
     else:
         print("\nEnter legal move.")
         input()
-        remove_stars(legal_positions)
         continue
 
     if turn == 'w':
