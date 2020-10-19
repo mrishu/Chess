@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## A simple Chess program in Python
 
-You can use the [editor on GitHub](https://github.com/sykocode/Chess/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Some requirements:
+- The program should be run in a text user interface.
+- Should be run using Python >= 3. If using Python 2, add the line:
+`from __future__ import print_function` at the start.
+- The program was made for running in Windows as it uses `cls` to clear the screen.
+Hence, if running in Linux, find and replace all instances of `cls` with `clear`.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sykocode/Chess/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### TODO: Add castling option.
