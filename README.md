@@ -2,7 +2,9 @@
 A chess program made by me in high school written in Python.
 It is meant to be run in a TUI.
 
-**NOTE for \*nix users**: Please replace all occurences of `cls` with `clear`.
+## How to run
+Simply `python chess.py`  
+(python3 should be used)
 
 ## Todo
 Add castling option
