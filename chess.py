@@ -4,7 +4,6 @@ ch = [['  '] * 8 for i in range(8)]
 
 
 def init():
-    
     ch[0][0] = 'R '
     ch[0][1] = 'N '
     ch[0][2] = 'B '
@@ -36,7 +35,7 @@ init()
 
 
 def disp(turn_to_play):
-    os.system('cls')
+    os.system('clear')
     print("  +" + "-----+" * 8)
     if turn_to_play == 'w':
         for i in range(7, -1, -1):
@@ -85,7 +84,7 @@ def on_attack(ini, fin):
     """To check if position at fin is under attack by piece by ini. If fin is under attack does not mean that the piece
     at ini can move over to fin since doing that can put a check on it's own king. This is checked in the
     legal(ini, fin) function."""
-    
+
     global ep_pos
 
     i_piece = ch[ini[0]][ini[1]]  # Piece at ini
@@ -208,7 +207,7 @@ def legal(ini, fin):
     is legal or not. It might not be legal because moving there would put it's own king under check."""
     """To check that, we move the piece at ini to fin without displaying and check whether that configuration puts
     the piece's king under check."""
-    
+
     if not on_attack(ini, fin):
         return False
     piece_at_fin = ch[fin[0]][fin[1]]
@@ -221,7 +220,7 @@ def legal(ini, fin):
         move(fin, ini)
         ch[fin[0]][fin[1]] = piece_at_fin
         return False
-        
+
     move(fin, ini)
     ch[fin[0]][fin[1]] = piece_at_fin
     return True
