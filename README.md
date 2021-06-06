@@ -4,7 +4,7 @@ It is meant to be run in a TUI.
 
 ## How to run
 Simply `python chess.py`  
-python>=3 should be used.
+`python>=3` should be used.
 
 ## Todo
 Add castling option.
