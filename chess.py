@@ -1,4 +1,12 @@
+#!/usr/bin/env python
+
+""" TUI based Python Chess Program """
+
+from __future__ import print_function
 import os
+
+CLEAR='clear'
+# CLEAR='cls' # For Windows
 
 ch = [['  '] * 8 for i in range(8)]
 
@@ -29,13 +37,12 @@ def init():
 
 init()
 
-"""An important note must be made that 'P '.isupper() or 'p '.islower() would give True.
-    This would be true for any letter other than 'p' or 'P'.
+"""An important note must be made that 'P '.isupper() and 'p '.islower(), both would give True.
     Whereas, '  ', '* ' would give False for both islower() and isupper() methods."""
 
 
 def disp(turn_to_play):
-    os.system('clear')
+    os.system(CLEAR)
     print("  +" + "-----+" * 8)
     if turn_to_play == 'w':
         for i in range(7, -1, -1):
@@ -81,7 +88,7 @@ def empty(piece):
 
 
 def on_attack(ini, fin):
-    """To check if position at fin is under attack by piece by ini. If fin is under attack does not mean that the piece
+    """To check if position at fin is under attack by piece by ini. If fin is under attack does not mean that the piece (under attack/movable)
     at ini can move over to fin since doing that can put a check on it's own king. This is checked in the
     legal(ini, fin) function."""
 
@@ -254,7 +261,7 @@ def under_check_func():
 
 
 def legalmov_left_func():
-    """To check if any legal move is left of the one in turn."""
+    """To check if any legal move is left for the current turn."""
     global turn
     if turn == 'b':
         for i in range(8):
